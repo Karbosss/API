@@ -1,0 +1,43 @@
+### Pobierz wszystkie notatki
+
+GET http://localhost:5086/api/notes
+Content-Type: application/json
+
+###
+### Pobierz notatkê o okreœlonym ID
+
+GET http://localhost:5086/api/notes/1
+Content-Type: application/json
+
+###
+### Dodaj now¹ notatkê
+
+POST http://localhost:5086/api/notes
+Content-Type: application/json
+
+{
+  "title": "Nowa notatka",
+  "content": "Treœæ nowej notatki"
+}
+
+###
+### Edytuj notatkê o okreœlonym ID
+
+PUT http://localhost:5086/api/notes/1
+Content-Type: application/json
+
+{
+  "content": "Zaktualizowana treœæ notatki"
+}
+
+###
+### Usuñ notatkê o okreœlonym ID
+
+DELETE http://localhost:5086/api/notes/1
+Content-Type: application/json
+
+###
+### Wyszukaj notatki po tytule
+
+GET http://localhost:5086/api/notes/search?title=Nowa
+Content-Type: application/json
